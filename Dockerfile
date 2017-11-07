@@ -10,4 +10,5 @@ RUN \
 FROM frolvlad/alpine-glibc
 
 COPY --from=0 migrate.linux-amd64 /usr/local/bin/migrate
+WORKDIR /migrations
 ENTRYPOINT ["migrate"]
